@@ -1,10 +1,313 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dario Bagnara</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dario Bagnara | Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio of Dario Bagnara - Computer Engineering, Cloud Infrastructure, Kubernetes and Distributed Systems."
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Ciao! 👋</h1>
-  <p>Questo è il mio sito GitHub.</p>
+  <div class="blur one"></div>
+  <div class="blur two"></div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">Dario<span>.</span></a>
+
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="cta-small" href="#contact">Contact me</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero" id="home">
+      <div class="fade-in">
+        <div class="eyebrow">
+          <span class="dot"></span>
+          Open to new opportunities in cloud and infrastructure engineering
+        </div>
+
+        <h1>
+          Hi, I'm
+          <span class="gradient-text">Dario Bagnara</span>
+        </h1>
+
+        <p>
+          Computer Engineering graduate student focused on cloud infrastructure,
+          Kubernetes orchestration and distributed systems.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-card fade-in">
+        <div class="mini-window">
+          <div class="mini-topbar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mini-body">
+            <div class="code-line long"></div>
+            <div class="code-line mid"></div>
+            <div class="code-line short"></div>
+            <div class="code-line long"></div>
+            <div class="code-line mid"></div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>Cloud</strong>
+            <span class="muted">Kubernetes, Docker</span>
+          </div>
+          <div class="stat">
+            <strong>Systems</strong>
+            <span class="muted">Linux, Networking</span>
+          </div>
+          <div class="stat">
+            <strong>Development</strong>
+            <span class="muted">Go, Rust, React</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="about">
+      <div class="fade-in">
+        <h2 class="section-title">About me</h2>
+        <p class="section-subtitle">
+          A technical profile focused on modern infrastructure, scalable systems and software engineering.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="card fade-in">
+          <h3>Who I am</h3>
+          <p class="muted">
+            I am currently completing a Master's degree in Computer Engineering –
+            Computing and Network Infrastructures at Politecnico di Torino.
+            My interests revolve around cloud-native systems, distributed infrastructures,
+            scalability, automation and platform reliability.
+          </p>
+          <div class="tags">
+            <span class="tag">Cloud Infrastructure</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Distributed Systems</span>
+            <span class="tag">Automation</span>
+          </div>
+        </article>
+
+        <article class="card fade-in">
+          <h3>Education</h3>
+          <p class="muted">
+            I hold a Bachelor's degree in Computer Engineering and I am currently
+            completing my Master's degree in Computing and Network Infrastructures.
+            My academic path has strengthened my background in systems engineering,
+            networking, cloud technologies and software development.
+          </p>
+          <div class="tags">
+            <span class="tag">Computer Engineering</span>
+            <span class="tag">Networking</span>
+            <span class="tag">Cloud Computing</span>
+            <span class="tag">Software Engineering</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="projects">
+      <div class="fade-in">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">
+          Selected projects related to cloud systems, software engineering and distributed infrastructures.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <article class="card project-card fade-in">
+          <div class="project-top">
+            <div class="project-icon">🔐</div>
+            <span class="tag">Go / Kubernetes</span>
+          </div>
+          <h3>WebSSH Proxy for Browser-Based VM Access</h3>
+          <p class="muted">
+            Contributed to the development of a browser-based SSH access system for
+            virtual machines orchestrated in Kubernetes, based on a WebSocket SSH proxy
+            integrated with the Kubernetes API for authentication and authorization
+            through user tokens.
+          </p>
+          <div class="project-links">
+            <a href="#">Project</a>
+            <a href="#">Architecture</a>
+          </div>
+        </article>
+
+        <article class="card project-card fade-in">
+          <div class="project-top">
+            <div class="project-icon">💾</div>
+            <span class="tag">Rust / Systems</span>
+          </div>
+          <h3>Emergency Backup</h3>
+          <p class="muted">
+            Gesture-triggered backup system implemented in Rust, designed to work
+            even when the graphical interface is unavailable. The application detects
+            a predefined mouse gesture and automatically initiates a secure backup
+            process to a USB device.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/daribg99/Emergency-Backup" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="#">Details</a>
+          </div>
+        </article>
+
+        <article class="card project-card fade-in">
+          <div class="project-top">
+            <div class="project-icon">📱</div>
+            <span class="tag">React Native</span>
+          </div>
+          <h3>SeniorSphere</h3>
+          <p class="muted">
+            Mobile application developed with React Native and Expo to support
+            service exchange between elderly people and younger members of the
+            local community through role-based interaction flows.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/daribg99/SeniorSphere" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="#">Screenshots</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="experience">
+      <div class="fade-in">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">
+          Research and technical experiences that shaped my engineering background.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="card fade-in">
+          <h3>Research Grant Holder</h3>
+          <p class="muted">
+            <strong>Politecnico di Torino</strong><br />
+            Jan 2026 – Mar 2026
+          </p>
+          <p class="muted">
+            Research activity focused on the optimized placement of applications in
+            distributed electrical infrastructures, with integration of the proposed
+            solutions into a Kubernetes multi-cluster environment and experimental
+            scalability and performance analysis in dynamic scenarios.
+          </p>
+          <div class="tags">
+            <span class="tag">Research</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Scalability</span>
+            <span class="tag">Distributed Infrastructure</span>
+          </div>
+        </article>
+
+        <article class="card fade-in">
+          <h3>School–Work Program</h3>
+          <p class="muted">
+            <strong>2000net</strong><br />
+            Jul 2016 – Aug 2016
+          </p>
+          <p class="muted">
+            Early professional experience in a software development company,
+            where I gained exposure to real engineering workflows and practical
+            development environments.
+          </p>
+          <div class="tags">
+            <span class="tag">Internship</span>
+            <span class="tag">Software Development</span>
+            <span class="tag">Industry Experience</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="contact">
+      <div class="fade-in">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">
+          Feel free to reach out for collaborations, engineering opportunities or technical discussions.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <article class="card fade-in">
+          <h3>Get in touch</h3>
+          <p class="muted">
+            I am interested in opportunities related to cloud infrastructure,
+            platform engineering, distributed systems and backend development.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <span>📧</span>
+              <span>daribg99@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <span>💼</span>
+              <span>linkedin.com/in/dario-bagnara-4a296232b</span>
+            </div>
+            <div class="contact-item">
+              <span>💻</span>
+              <span>github.com/daribg99</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card fade-in">
+          <h3>Core skills</h3>
+          <p class="muted">
+            My technical background includes cloud computing, networking,
+            software engineering and systems-oriented development with a focus
+            on reliable and scalable infrastructures.
+          </p>
+          <div class="tags">
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Go</span>
+            <span class="tag">Rust</span>
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">React</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    © 2026 Dario Bagnara · All rights reserved
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
