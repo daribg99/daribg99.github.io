@@ -219,7 +219,7 @@ main {
 }
 
 .hero-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
   border: 1px solid var(--card-border);
   border-radius: 28px;
   padding: 1.3rem;
@@ -241,7 +241,7 @@ main {
 .mini-window {
   border-radius: 20px;
   background: #0a1020;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
 }
 
@@ -249,7 +249,7 @@ main {
   display: flex;
   gap: 0.45rem;
   padding: 0.8rem 0.9rem;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   background: #0d1528;
 }
 
@@ -257,7 +257,7 @@ main {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.28);
+  background: rgba(255, 255, 255, 0.28);
 }
 
 .mini-body {
@@ -269,12 +269,20 @@ main {
 .code-line {
   height: 12px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(124,156,255,0.8), rgba(159,124,255,0.45));
+  background: linear-gradient(90deg, rgba(124, 156, 255, 0.8), rgba(159, 124, 255, 0.45));
 }
 
-.code-line.short { width: 44%; }
-.code-line.mid { width: 72%; }
-.code-line.long { width: 90%; }
+.code-line.short {
+  width: 44%;
+}
+
+.code-line.mid {
+  width: 72%;
+}
+
+.code-line.long {
+  width: 90%;
+}
 
 .stats {
   margin-top: 1rem;
@@ -284,8 +292,8 @@ main {
 }
 
 .stat {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 1rem;
   text-align: center;
@@ -388,7 +396,7 @@ section {
   display: grid;
   place-items: center;
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(124,156,255,0.24), rgba(159,124,255,0.24));
+  background: linear-gradient(135deg, rgba(124, 156, 255, 0.24), rgba(159, 124, 255, 0.24));
   font-size: 1.1rem;
 }
 
@@ -408,9 +416,74 @@ section {
   color: white;
 }
 
+/* SKILLS */
+#skills .section-title,
+#skills .section-subtitle {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.skill-row h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.skill-row .tags {
+  margin-top: 0;
+  justify-content: flex-start;
+}
+
+#skills .tag {
+  padding: 0.5rem 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(124, 156, 255, 0.22);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+#skills .tag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(124, 156, 255, 0.4);
+  background: rgba(124, 156, 255, 0.12);
+}
+
+@media (max-width: 820px) {
+  .skill-row {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+}
+
+/* CONTACT */
 .contact-grid {
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: start;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.contact-grid > .card {
+  width: 100%;
+  max-width: 640px;
+}
+
+#contact .section-title,
+#contact .section-subtitle {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-list {
@@ -425,8 +498,8 @@ section {
   gap: 0.9rem;
   padding: 0.9rem 1rem;
   border-radius: 16px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .contact-item span:first-child {
@@ -436,6 +509,16 @@ section {
   place-items: center;
   border-radius: 12px;
   background: rgba(124, 156, 255, 0.16);
+  flex-shrink: 0;
+}
+
+.contact-item a {
+  color: #dce5ff;
+  word-break: break-word;
+}
+
+.contact-item a:hover {
+  color: white;
 }
 
 footer {
@@ -458,8 +541,7 @@ footer {
 @media (max-width: 980px) {
   .hero,
   .about-grid,
-  .project-grid,
-  .contact-grid {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
@@ -503,5 +585,9 @@ footer {
 
   .btn {
     width: 100%;
+  }
+
+  .contact-item {
+    align-items: flex-start;
   }
 }
